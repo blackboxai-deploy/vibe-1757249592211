@@ -1,0 +1,53 @@
+{
+  "extends": "@quasar/app-vite/tsconfig-preset",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "target": "ES2022",
+    "useDefineForClassFields": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "allowJs": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": false,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    
+    /* Vue specific */
+    "types": ["node", "quasar"],
+    "paths": {
+      "@/*": ["./src/*"],
+      "src/*": ["./src/*"],
+      "app/*": [".*"],
+      "components/*": ["./src/components/*"],
+      "layouts/*": ["./src/layouts/*"],
+      "pages/*": ["./src/pages/*"],
+      "assets/*": ["./src/assets/*"],
+      "boot/*": ["./src/boot/*"],
+      "stores/*": ["./src/stores/*"]
+    }
+  },
+  "include": [
+    "./src/**/*",
+    "./src-pwa/**/*",
+    "./src-cordova/**/*",
+    "./src-electron/**/*",
+    "./src-bex/**/*",
+    "./quasar.config.*"
+  ],
+  "exclude": [
+    "./dist",
+    "./.quasar",
+    "./node_modules"
+  ]
+}
