@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "quasar dev --port 3000",
-    "build": "quasar build --no-lint",
-    "start": "quasar serve dist/spa",
+    "dev": "node init && quasar dev --port 3000",
+    "build": "node init && quasar build --no-lint",
+    "start": "node init && quasar serve dist/spa",
     "lint": "eslint --ext .js,.ts,.vue ./",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore"
   },
